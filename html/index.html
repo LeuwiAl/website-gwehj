@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>DOCKER vs PODMAN</title>
+    <link rel="stylesheet" href="styles.css"> <!-- File CSS Anda -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- AOS CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="marquee-track">
+        <div class="motion-cta-wrapper">
+            <div class="motion-cta">
+                <div class="motion-cta-text">Welcome to the Docker vs Podman Performance Study! Stay tuned for the latest updates and results.</div>
+            </div>
+            <div class="motion-cta">
+                <div class="motion-cta-text">📊 Did you know? Docker has over 13 million users worldwide.</div>
+            </div>
+            <div class="motion-cta">
+                <div class="motion-cta-text">🖥️ Podman is 100% daemonless, making it a safer choice for container management.</div>
+            </div>
+            <div class="motion-cta">
+                <div class="motion-cta-text">🐳 Docker and Podman: Empowering developers to innovate faster with containerization.</div>
+            </div>
+            <!-- Duplikasi konten untuk infinity loop -->
+            <div class="motion-cta">
+                <div class="motion-cta-text">Welcome to the Docker vs Podman Performance Study! Stay tuned for the latest updates and results.</div>
+            </div>
+            <div class="motion-cta">
+                <div class="motion-cta-text">📊 Did you know? Docker has over 13 million users worldwide.</div>
+            </div>
+            <div class="motion-cta">
+                <div class="motion-cta-text">🖥️ Podman is 100% daemonless, making it a safer choice for container management.</div>
+            </div>
+            <div class="motion-cta">
+                <div class="motion-cta-text">🐳 Docker and Podman: Empowering developers to innovate faster with containerization.</div>
+            </div>
+        </div>
+    </div>
+    <div class="theme-toggle">
+        <label class="switch">
+            <input type="checkbox" id="darkModeToggle">
+            <span class="slider">
+            </span>
+        </label>
+    </div>
+    
+    </div>
+    <div class="container">
+        <header class="header" data-aos="fade-down">
+            Docker vs Podman Performance Test
+        </header>
+
+        <div class="banner" data-aos="fade-up">
+            <h2>Container Runtime Performance Study</h2>
+            <p>Testing Nginx performance on Docker and Podman</p>
+        </div>
+
+        <section class="section" data-aos="fade-right">
+            <h2 class="section-title">Overview</h2>
+            <div class="content-card">
+                <p>This research aims to compare the performance of Docker and Podman when running Nginx web server under various load conditions.</p>
+                <p>Both Docker and Podman are container technologies that allow applications to run in isolated environments, but they have different architectural approaches and security models.</p>
+            </div>
+            
+            <div class="image-placeholder" data-aos="zoom-in">
+                CONTAINER ARCHITECTURE DIAGRAM
+            </div>
+        </section>
+
+        <section class="section" data-aos="fade-left">
+            <h2 class="section-title">What is Docker and Podman?</h2>
+            <div class="content-card">
+                <h3>Docker</h3>
+                <p>
+                    Docker is a platform for developing, shipping, and running applications in containers. It uses a client-server architecture where the Docker daemon manages containers, images, networks, and volumes. Docker is widely adopted due to its ease of use, extensive ecosystem, and robust community support.
+                </p>
+                <p>
+                    <strong>Key Features:</strong>
+                    <ul>
+                        <li>Easy to use with a simple CLI and GUI tools.</li>
+                        <li>Large ecosystem with Docker Hub for sharing container images.</li>
+                        <li>Supports multi-container applications using Docker Compose.</li>
+                        <li>Requires a daemon running with root privileges, which can be a security concern.</li>
+                    </ul>
+                </p>
+
+                <h3>Podman</h3>
+                <p>
+                    Podman is a container engine developed by Red Hat that is daemonless and does not require root privileges. It is designed to be a drop-in replacement for Docker, offering similar functionality but with a focus on security and simplicity.
+                </p>
+                <p>
+                    <strong>Key Features:</strong>
+                    <ul>
+                        <li>Daemonless architecture, which improves security and reduces resource usage.</li>
+                        <li>Does not require root privileges, making it safer for multi-user environments.</li>
+                        <li>Compatible with Docker CLI commands, making migration easy.</li>
+                        <li>Supports rootless containers, which are more secure.</li>
+                    </ul>
+                </p>
+
+                <h3>Comparison</h3>
+                <p>
+                    Docker and Podman both allow you to run containers, but they differ in their architecture and security models. Docker relies on a central daemon, while Podman is daemonless and can run containers without root privileges. This makes Podman a more secure option for environments where security is a priority.
+                </p>
+            </div>
+        </section>
+
+        <section class="section" data-aos="fade-up">
+            <h2 class="section-title">Test Environment</h2>
+            <div class="content-card">
+                <p>All tests were conducted on identical hardware configurations with the following specifications:</p>
+                <ul style="list-style-position: inside; padding-left: 20px; font-size: 1.2rem;">
+                    <li>CPU: Intel Core i7-10700K</li>
+                    <li>RAM: 32GB DDR4</li>
+                    <li>Storage: 1TB NVMe SSD</li>
+                    <li>Operating System: Ubuntu 22.04 LTS</li>
+                    <li>Network: 1Gbps Ethernet</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section" data-aos="fade-down">
+            <h2 class="section-title">Preliminary Results</h2>
+            <div class="content-card">
+                <p>The following table shows the comparison of Docker and Podman performance metrics when running Nginx:</p>
+            </div>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Docker</th>
+                        <th>Podman</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Requests per second</td>
+                        <td>8,245</td>
+                        <td>8,134</td>
+                    </tr>
+                    <tr>
+                        <td>Response time (ms)</td>
+                        <td>1.84</td>
+                        <td>1.92</td>
+                    </tr>
+                    <tr>
+                        <td>Failed requests</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>CPU usage (%)</td>
+                        <td>24.5</td>
+                        <td>26.3</td>
+                    </tr>
+                    <tr>
+                        <td>Memory usage (MB)</td>
+                        <td>156</td>
+                        <td>162</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="section" data-aos="fade-up">
+            <h2 class="section-title">Methodology</h2>
+            <div class="content-card">
+                <p>Performance testing was conducted using the following tools:</p>
+                <ul style="list-style-position: inside; padding-left: 20px; font-size: 1.2rem;">
+                    <li>ApacheBench (ab) for HTTP load testing</li>
+                    <li>Siege for concurrency testing</li>
+                    <li>htop and ctop for resource monitoring</li>
+                </ul>
+                <p>Each test was repeated 10 times to ensure statistical significance, with the average values reported.</p>
+            </div>
+        </section>
+
+        <section class="section" data-aos="fade-up">
+            <h2 class="section-title">Gallery</h2>
+            <div class="gallery">
+                <img src="https://via.placeholder.com/300" alt="Image 1">
+                <img src="https://via.placeholder.com/300" alt="Image 2">
+                <img src="https://via.placeholder.com/300" alt="Image 3">
+                <img src="https://via.placeholder.com/300" alt="Image 4">
+            </div>
+        </section>
+
+        <div class="banner" data-aos="fade-up">
+            <h2>Research in Progress</h2>
+            <p>Stay tuned for complete results and analysis</p>
+        </div>
+
+        <footer class="footer" data-aos="fade-up">
+            <p>Container Performance Research Project - 2025</p>
+            <p>For academic purposes only</p>
+        </footer>
+    </div>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    AOS.init(); // Pastikan inisialisasi setelah AOS dimuat
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
